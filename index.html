@@ -215,6 +215,7 @@
         }
         .logo-text {
             display: flex;
+            font-size: 120%;
             flex-direction: column;
         }
         .logo-text span:first-child {
@@ -429,7 +430,7 @@
         }
         .hero-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            /* grid-template-columns: 1fr 1fr; */
             gap: 60px;
             align-items: center;
         }
@@ -451,6 +452,7 @@
         }
         .hero-title {
             font-size: clamp(40px, 5vw, 64px);
+            /* font-size:210%; */
             color: var(--primary-dark);
             margin-bottom: 24px;
             line-height: 1.1;
@@ -492,9 +494,11 @@
             position: relative;
         }
         .hero-image {
-            width: 100%;
-            height: 500px;
+            height: 500px!important;
+            width: 100%!important;
+            display: block;
             object-fit: cover;
+            zoom: none;
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-lg);
         }
@@ -1528,7 +1532,7 @@
                         </svg>
                     </div>
                     <div class="logo-text">
-                        <span>Green Bhopal</span>
+                        <span style="font-size: 200%;">Green Bhopal</span>
                         <span>Automation And Fountain,Irrigation Service</span>
                     </div>
                 </a>
@@ -1611,14 +1615,37 @@
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                             </svg>
-                            Trusted by 10,000 Customers
+                            Trusted by 1,000 Customers
                         </div>
                         <h1 class="hero-title animate-in animate-delay-1">
-                            Modern Fountain <span>Automation</span> for Smart Garden
+                           <span> Smart</span> And Music Fountain 
+                        </h1>
+                        <p class="hero-description animate-in animate-delay-2">A Smart Music Fountain is a beautiful blend of technology and art that brings water to life through rhythm and light. Using a microcontroller like an the fountain’s water pumps and vibrant RGB LEDs are synchronized to react to the frequencies and beats of any song. This creates a mesmerizing "dancing water" effect where the height of the spray and the changing colors perfectly match the music. It is a fantastic project for anyone interested in Smart decor, turning a simple water feature into a futuristic, high-tech experience.</p>
+                        <div class="hero-buttons animate-in animate-delay-3">
+                            <button class="btn btn-primary" onclick="showPage('products')">Explore Products</button>
+                            <button class="btn btn-outline" onclick="showPage('about')">Learn More</button>
+                        </div>
+                                    <div class="hero-visual animate-in animate-delay-3">
+                        <img src="https://media.istockphoto.com/id/1241437823/photo/bright-and-colorful-fountain-at-night-street.webp?a=1&b=1&s=612x612&w=0&k=20&c=0vS-cdwgAcKTKQlzidtQwEM8869wCwFW5dxqvoWS3eM=" alt="Modern Fountain" class="hero-image" >
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+                            <!-- ========================================
+         HOME PAGE
+    ======================================== -->
+    <div class="page active" id="homePage">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1 class="hero-title animate-in animate-delay-1">
+                           <span> Smart</span> And Irrigation System 
                         </h1>
                         <p class="hero-description animate-in animate-delay-2">
-                            Premium quality Garden machinery and Garden Smart automation. From automated irrigation systems to precision Garden Smart tools - everything you need to maximize your yield.
-                        </p>
+                       A Smart Drip Irrigation System is a precision-based agricultural solution that delivers the exact amount of water directly to the roots of plants. Integrated with IoT sensors and automated valves, it monitors real-time soil moisture and climate conditions to prevent water wastage. By using advanced pressure-compensated drippers and smart scheduling, this system ensures optimal plant growth while significantly reducing water consumption and labor costs, making it the ultimate tool for sustainable and high-tech farming.</p>
                         <div class="hero-buttons animate-in animate-delay-3">
                             <button class="btn btn-primary" onclick="showPage('products')">Explore Products</button>
                             <button class="btn btn-outline" onclick="showPage('about')">Learn More</button>
@@ -1638,6 +1665,12 @@
                             </div>
                         </div>
                     </div>
+                    <div class="hero-visual animate-in animate-delay-3">
+                        <img src="" alt="Modern Fountain" class="hero-image">
+                        <div class="hero-card hero-card-1">
+                            <div style="font-size: 12px; color: var(--muted); margin-bottom: 4px;">Starting from</div>
+                            <div style="font-size: 24px; font-weight: 700; color: var(--primary);">Rs. 15,000</div>
+                     <!--
                     <div class="hero-visual animate-in animate-delay-3">
                         <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=500&fit=crop" alt="Modern Fountain" class="hero-image">
                         <div class="hero-card hero-card-1">
@@ -1711,7 +1744,7 @@
     </div>
     <!-- ========================================
          PRODUCTS PAGE
-    ======================================== -->
+    ======================================== 
     <div class="page" id="productsPage">
         <section class="products-section" style="padding-top: 120px;">
             <div class="container">
@@ -1743,7 +1776,7 @@
     </div>
     <!-- ========================================
          ABOUT PAGE
-    ======================================== -->
+    ======================================== 
     <div class="page" id="aboutPage">
         <section class="about" style="padding-top: 120px;">
             <div class="container">
@@ -1813,7 +1846,7 @@
     </div>
     <!-- ========================================
          CONTACT PAGE
-    ======================================== -->
+    ======================================== 
     <div class="page" id="contactPage">
         <section class="contact" style="padding-top: 120px;">
             <div class="container">
@@ -1894,7 +1927,7 @@
     </div>
     <!-- ========================================
          FOOTER
-    ======================================== -->
+    ======================================== 
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -1970,7 +2003,7 @@
     </footer>
     <!-- ========================================
          AUTH MODAL
-    ======================================== -->
+    ======================================== 
     <div class="modal-overlay" id="authModal">
         <div class="modal">
             <div class="modal-header">
@@ -1983,7 +2016,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Login Form -->
+                <!-- Login Form -
                 <form id="loginForm" onsubmit="handleLogin(event)">
                     <div class="form-group">
                         <label for="loginEmail">Email Address</label>
@@ -1996,7 +2029,7 @@
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
                     <p class="auth-switch">Don't have an account? <a onclick="toggleAuthForm()">Register</a></p>
                 </form>
-                <!-- Register Form -->
+                <!-- Register Form -
                 <form id="registerForm" style="display: none;" onsubmit="handleRegister(event)">
                     <div class="form-group">
                         <label for="registerName">Full Name</label>
@@ -2018,7 +2051,7 @@
     </div>
     <!-- ========================================
          CART SIDEBAR
-    ======================================== -->
+    ======================================== -
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
             <h3>Your Cart</h3>
@@ -2030,7 +2063,7 @@
             </button>
         </div>
         <div class="cart-items" id="cartItems">
-            <!-- Cart items rendered here -->
+            <!-- Cart items rendered here 
         </div>
         <div class="cart-footer">
             <div class="cart-total">
@@ -2043,7 +2076,7 @@
     </div>
     <!-- ========================================
          CHECKOUT MODAL
-    ======================================== -->
+    ======================================== -
     <div class="modal-overlay" id="checkoutModal">
         <div class="modal checkout-modal">
             <div class="modal-header">
@@ -2142,7 +2175,7 @@
     </div>
     <!-- ========================================
          CHATBOT
-    ======================================== -->
+    ======================================== -
     <button class="chatbot-toggle" onclick="toggleChatbot()" aria-label="Open chat">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
@@ -2188,7 +2221,7 @@
             </button>
         </div>
     </div>
-    <!-- Toast -->
+    <!-- Toast -
     <div class="toast" id="toast"></div>
     <!-- ========================================
          JAVASCRIPT
@@ -2264,7 +2297,7 @@
                 category: "tractor",
                 price: 45000,
                 originalPrice: 55000,
-                image: "https://images.unsplash.com/photo-1592878904946-b3cd8ae243d0?w=400&h=300&fit=crop",
+                image: "",
                 specs: { power: "7 HP Diesel", width: "60 cm", depth: "20 cm" },
                 featured: true
             },
