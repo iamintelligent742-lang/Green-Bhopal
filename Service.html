@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Green Bhopal</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body { background: #f4f4f4; color: #333; line-height: 1.6; }
+        
+        /* Header Section */
+        .service-header {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .service-header h1 { color: #00bfff; font-size: 2.5rem; }
+
+        /* Services Container */
+        .container {
+            max-width: 1100px;
+            margin: -40px auto 50px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* Service Cards */
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-top: 5px solid #00bfff;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card h2 { margin-bottom: 15px; color: #111; }
+        .card p { color: #666; margin-bottom: 20px; font-size: 0.95rem; }
+        
+        .feature-list {
+            text-align: left;
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        .feature-list li {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00bfff;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00bfff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn:hover { background: #008ecc; }
+                .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-image: url("C:/Users/wwwsi/OneDrive/Attachments/background.png");    
+    background-size: cover;
+    background-color: #b5eec6;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+ } 
+
+.logo {
+    color: #bb1bbb;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #03a8f5ec;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0206f1;
+    transition: all 5s;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #f1f5f9;
+    transition: 0.4s;
+}
+
+/* Mobile Responsive Logic */
+@media (max-width: 1078px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(15, 23, 42, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.5s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+ <nav class="navbar">
+        <div class="logo"><h2>Green Bhopal</h2>
+             <P style="color: #e92be9;">Automation And Fountain ,Irrigation Service</P></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" style="text-decoration: none;">Home</a></li>
+            <li><a href="product.html" style="text-decoration: none;">Product</a></li>
+            <li><a href="service.html" style="text-decoration: none;">Services</a></li>
+            <li><a href="about.html" style="text-decoration: none;">About</a></li>
+            <li><a href="contact.html" style="text-decoration: none;">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+         
+    </nav>
+    <br><br><br><br><br><br><br>
+   
+    <section class="service-header">
+        <h1>Smart Automation Services</h1>
+        <p>Advanced IoT Solutions for Modern Problems</p>
+    </section>
+
+    <div class="container">
+        <!-- Service 1 -->
+        <div class="card">
+            <h2>Smart Irrigation</h2>
+            <p>Ye ek fully automatic system hai jo aapke garden ya khet ko smart banata hai. Pani ki bachat aur paudhon ki sahi dekhbhal ensure karein.</p>
+            <ul class="feature-list">
+                <li>Mobile App Control</li>
+                <li>Real-time On/Off[cite: 2]</li>
+                <li>Custom Timer Scheduling[cite: 2]</li>
+            </ul>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="card">
+            <h2>Smart Fogger</h2>
+            <p>Advanced technology ke saath cooling aur watering ko asaan banayein. Manually switch on-off karne ki tension se mukti payen.[cite: 2]</p>
+            <ul class="feature-list">
+                <li>Precision Cooling[cite: 2]</li>
+                <li>Auto-mode Operation[cite: 2]</li>
+                <li>World-wide Access[cite: 2]</li>
+            </ul>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="card">
+            <h2>Music Fountain</h2>
+            <p>Technology aur art ka ek badhiya mix, jahan water pumps aur RGB LEDs gaane ki rhythm ke hisaab se badalte hain.[cite: 2]</p>
+            <ul class="feature-list">
+                <li>Music Beat Sync[cite: 2]</li>
+                <li>Mesmerizing RGB Effects[cite: 2]</li>
+                <li>Futuristic Decor[cite: 2]</li>
+            </ul>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </div>
+
+</body>
+</html>
