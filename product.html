@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Bhopal</title>
+    <style>
+        /* CSS Reset & Fonts */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #111;
+            color: #00bfff;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 4px solid #00bfff;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            /* Auto-responsive columns: Desktop pe 5, Mobile pe 1 ya 2 */
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e0e0e0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 191, 255, 0.2);
+            border-color: #00bfff;
+        }
+
+        .image-box {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-color: #f9f9f9;
+            overflow: hidden;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .image-box img {
+            transform: scale(1.1);
+        }
+
+        .details {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .category {
+            font-size: 0.7rem;
+            color: #00bfff;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .product-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 15px;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .buy-btn {
+            background-color: #111;
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .buy-btn:hover {
+            background-color: #00bfff;
+            color: #111;
+        }
+
+        footer {
+            background: #111;
+            color: #888;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+               .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-image: url("C:/Users/wwwsi/OneDrive/Attachments/background.png");    
+    background-size: cover;
+    background-color: #b5eec6;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+ } 
+
+.logo {
+    color: #bb1bbb;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #03a8f5ec;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0206f1;
+    transition: all 5s;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #f1f5f9;
+    transition: 0.4s;
+}
+
+/* Mobile Responsive Logic */
+@media (max-width: 1078px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(15, 23, 42, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.5s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+}
+    </style>
+</head>
+<body>
+ <nav class="navbar">
+        <div class="logo"><h2>Green Bhopal</h2>
+             <P style="color: #e92be9;">Automation And Fountain ,Irrigation Service</P></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" style="text-decoration: none;">Home</a></li>
+            <li><a href="product.html" style="text-decoration: none;">Product</a></li>
+            <li><a href="service.html" style="text-decoration: none;">Services</a></li>
+            <li><a href="about.html" style="text-decoration: none;">About</a></li>
+            <li><a href="contact.html" style="text-decoration: none;">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+         
+    </nav>
+    
+   <br><br><br><br><br><br><br>
+    <header>
+        <h1>Green Bhopal</h1>
+        <p>Premium IoT, Fogger, and Irrigation Systems</p>
+    </header>
+
+    <div class="container">
+        <div class="product-grid">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Smart+Irrigation" alt="Product 1">
+                </div>
+                <div class="details">
+                    <span class="category">Irrigation</span>
+                    <h3 class="product-name">WiFi Irrigation Controller</h3>
+                    <button class="buy-btn">Inquiry Now</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Soil+Sensor" alt="Product 2">
+                </div>
+                <div class="details">
+                    <span class="category">Sensors</span>
+                    <h3 class="product-name">Soil Moisture Sensor V2</h3>
+                    <button class="buy-btn">Inquiry Now</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Water+Pump" alt="Product 3">
+                </div>
+                <div class="details">
+                    <span class="category">Pumps</span>
+                    <h3 class="product-name">12V DC High Pressure Pump</h3>
+                    <button class="buy-btn">Inquiry Now</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Fogger+Nozzle" alt="Product 4">
+                </div>
+                <div class="details">
+                    <span class="category">Fogger</span>
+                    <h3 class="product-name">Mist Fogger Nozzle (Brass)</h3>
+                    <button class="buy-btn">Inquiry Now</button>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Music+Fountain" alt="Product 5">
+                </div>
+                <div class="details">
+                    <span class="category">Fountain</span>
+                    <h3 class="product-name">Music Sync Controller</h3>
+                    <button class="buy-btn">Inquiry Now</button>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Relay+Module" alt="Product 6">
+                </div>
+                <div class="details">
+                    <span class="category">IoT</span>
+                    <h3 class="product-name">8-Channel WiFi Relay</h3>
+                    <button class="buy-btn">Inquiry Now</button>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=ESP32" alt="Product 7">
+                </div>
+                <div class="details">
+                    <span class="category">Hardware</span>
+                    <h3 class="product-name">ESP32 Dev Kit V1</h3>
+                    <button class="buy-btn">Inquiry Now</button>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Flow+Meter" alt="Product 8">
+                </div>
+                <div class="details">
+                    <span class="category">Sensors</span>
+                    <h3 class="product-name">Water Flow Sensor</h3>
+                    <button class="buy-btn">Inquiry Now</button>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=RGB+Light" alt="Product 9">
+                </div>
+                <div class="details">
+                    <span class="category">Lighting</span>
+                    <h3 class="product-name">Underwater RGB LED</h3>
+                    <button class="buy-btn">Inquiry Now</button>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Rain+Sensor" alt="Product 10">
+                </div>
+                <div class="details">
+                    <span class="category">Sensors</span>
+                    <h3 class="product-name">Digital Rain Sensor</h3>
+                    <button class="buy-btn">Inquiry Now</button>
+                </div>
+            </div>
+
+            <!-- Note to Arjun: Repeat this block structure and change details manually -->
+            <!-- Product 11 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Item+11" alt="Product 11">
+                </div>
+                <div class="details"><span class="category">Tech</span><h3 class="product-name">Smart Timer Switch</h3><button class="buy-btn">Inquiry Now</button></div>
+            </div>
+            <!-- Product 12 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Item+12" alt="Product 12">
+                </div>
+                <div class="details"><span class="category">Fogger</span><h3 class="product-name">Cooling Fogger Pump</h3><button class="buy-btn">Inquiry Now</button></div>
+            </div>
+            <!-- Product 13 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Item+13" alt="Product 13">
+                </div>
+                <div class="details"><span class="category">Pumps</span><h3 class="product-name">Submersible Pump 220V</h3><button class="buy-btn">Inquiry Now</button></div>
+            </div>
+            <!-- Product 14 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Item+14" alt="Product 14">
+                </div>
+                <div class="details"><span class="category">Sensors</span><h3 class="product-name">DHT22 Humidity Sensor</h3><button class="buy-btn">Inquiry Now</button></div>
+            </div>
+            <!-- Product 15 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Item+15" alt="Product 15">
+                </div>
+                <div class="details"><span class="category">IoT</span><h3 class="product-name">Arduino Uno Kit</h3><button class="buy-btn">Inquiry Now</button></div>
+            </div>
+            <!-- Product 16 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Item+16" alt="Product 16">
+                </div>
+                <div class="details"><span class="category">Irrigation</span><h3 class="product-name">Drip Irrigation Set</h3><button class="buy-btn">Inquiry Now</button></div>
+            </div>
+            <!-- Product 17 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Item+17" alt="Product 17">
+                </div>
+                <div class="details"><span class="category">Hardware</span><h3 class="product-name">Jumper Wires Pack</h3><button class="buy-btn">Inquiry Now</button></div>
+            </div>
+            <!-- Product 18 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Item+18" alt="Product 18">
+                </div>
+                <div class="details"><span class="category">Valve</span><h3 class="product-name">Solenoid Valve 1/2 inch</h3><button class="buy-btn">Inquiry Now</button></div>
+            </div>
+            <!-- Product 19 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Item+19" alt="Product 19">
+                </div>
+                <div class="details"><span class="category">Fountain</span><h3 class="product-name">Nozzle SS Jet</h3><button class="buy-btn">Inquiry Now</button></div>
+            </div>
+            <!-- Product 20 -->
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="https://placehold.co/400x400/111/00bfff?text=Item+20" alt="Product 20">
+                </div>
+                <div class="details"><span class="category">Sensors</span><h3 class="product-name">Ultrasonic Sensor</h3><button class="buy-btn">Inquiry Now</button></div>
+            </div>
+
+            <!-- Product 21 to 35 -->
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P21"></div><div class="details"><span class="category">IoT</span><h3 class="product-name">GSM Sim800L Module</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P22"></div><div class="details"><span class="category">Sensors</span><h3 class="product-name">Gas Sensor MQ2</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P23"></div><div class="details"><span class="category">Pumps</span><h3 class="product-name">Solar Water Pump</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P24"></div><div class="details"><span class="category">Lighting</span><h3 class="product-name">Solar Street Light</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P25"></div><div class="details"><span class="category">Hardware</span><h3 class="product-name">OLED Display 0.96</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P26"></div><div class="details"><span class="category">Hardware</span><h3 class="product-name">Breadboard Large</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P27"></div><div class="details"><span class="category">Power</span><h3 class="product-name">Lipo Battery 11.1V</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P28"></div><div class="details"><span class="category">IoT</span><h3 class="product-name">NodeMCU V3 WiFi</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P29"></div><div class="details"><span class="category">Accessories</span><h3 class="product-name">Poly Pipe 16mm</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P30"></div><div class="details"><span class="category">Accessories</span><h3 class="product-name">Pipe Tee Connector</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P31"></div><div class="details"><span class="category">Sensors</span><h3 class="product-name">LDR Module Light</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P32"></div><div class="details"><span class="category">Sensors</span><h3 class="product-name">PIR Motion Sensor</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P33"></div><div class="details"><span class="category">IoT</span><h3 class="product-name">4-Ch Relay Board</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P34"></div><div class="details"><span class="category">Power</span><h3 class="product-name">Buck Converter LM2596</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P35"></div><div class="details"><span class="category">Tools</span><h3 class="product-name">Soldering Iron 25W</h3><button class="buy-btn">Inquiry</button></div></div>
+
+            <!-- Products 36 to 50 -->
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P36"></div><div class="details"><span class="category">Fountain</span><h3 class="product-name">Crystal Jet Nozzle</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P37"></div><div class="details"><span class="category">Fogger</span><h3 class="product-name">Pressure Pipe 6mm</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P38"></div><div class="details"><span class="category">Power</span><h3 class="product-name">Power Adapter 12V 5A</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P39"></div><div class="details"><span class="category">IoT</span><h3 class="product-name">Raspberry Pi Pico</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P40"></div><div class="details"><span class="category">Sensors</span><h3 class="product-name">pH Sensor Module</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P41"></div><div class="details"><span class="category">Hardware</span><h3 class="product-name">IP65 Enclosure Box</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P42"></div><div class="details"><span class="category">Irrigation</span><h3 class="product-name">Tap Timer Digital</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P43"></div><div class="details"><span class="category">Power</span><h3 class="product-name">Solar Panel 10W</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P44"></div><div class="details"><span class="category">Sensors</span><h3 class="product-name">Sound Sensor</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P45"></div><div class="details"><span class="category">IoT</span><h3 class="product-name">BT HC-05 Module</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P46"></div><div class="details"><span class="category">Irrigation</span><h3 class="product-name">End Cap 16mm</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P47"></div><div class="details"><span class="category">Fogger</span><h3 class="product-name">Anti Drip Valve</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P48"></div><div class="details"><span class="category">Hardware</span><h3 class="product-name">Multimeter Digital</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P49"></div><div class="details"><span class="category">Hardware</span><h3 class="product-name">TP4056 Charger</h3><button class="buy-btn">Inquiry</button></div></div>
+            <div class="product-card"><div class="image-box"><img src="https://placehold.co/400x400/111/00bfff?text=P50"></div><div class="details"><span class="category">Kit</span><h3 class="product-name">Ultimate Starter Kit</h3><button class="buy-btn">Inquiry</button></div></div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Arjun Tech | Smart Automation Solutions</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">Bhopal, India | info@arjuntech.com</p>
+    </footer>
+
+</body>
+</html>
