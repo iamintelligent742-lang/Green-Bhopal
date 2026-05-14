@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+} 
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .contact-section {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            color: #666;
+        }
+        .contact-wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .contact-form {
+            flex-basis: 60%;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-info {
+            flex-basis: 35%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .contact-info h3 {
+            margin-top: 0;
+        }
+        .contact-info p {
+            margin: 10px 0;
+        } 
+       .navbar {
+            display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-image: url("C:/Users/wwwsi/OneDrive/Attachments/background.png");    
+    background-size: cover;
+    background-color: #b5eec6;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+ } 
+
+.logo {
+    color: #bb1bbb;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #03a8f5ec;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0206f1;
+    transition: all 5s;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #f1f5f9;
+    transition: 0.4s;
+}
+
+/* Mobile Responsive Logic */
+@media (max-width: 1078px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(15, 23, 42, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.5s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+}
+    </style>
+</head>
+<body>
+<nav class="navbar">
+        <div class="logo"><h2>Green Bhopal</h2>
+             <P style="color: #e92be9;">Automation And Fountain ,Irrigation Service</P></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" style="text-decoration: none;">Home</a></li>
+            <li><a href="product.html" style="text-decoration: none;">Product</a></li>
+            <li><a href="service.html" style="text-decoration: none;">Services</a></li>
+            <li><a href="about.html" style="text-decoration: none;">About</a></li>
+            <li><a href="contact.html" style="text-decoration: none;">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+         
+    </nav>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>    
+    <section class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Send us a message, and we'll get back to you soon!</p>
+            
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <textarea rows="5" placeholder="Message" required></textarea>
+                    <button type="submit">Message Send</button>
+                </form>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3> Contact Details</h3>
+                    <p><strong>Email:</strong> iamintell@gmail.com</p>
+                    <p><strong>Phone:</strong> +91 9893898191 </p>
+                    <p><strong>Address:</strong> Bhopal, Madhya Pradesh, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
