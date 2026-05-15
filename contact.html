@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Green Bhopal</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column; /* Footer ko niche rakhne ke liye */
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: #b5eec6;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h2 { color: #bb1bbb; font-size: 24px; }
+        .logo p { color: #e92be9; font-size: 12px; font-weight: bold; }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links li { margin-left: 30px; }
+        .nav-links a {
+            text-decoration: none;
+            color: #03a8f5ec;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: #0206f1; }
+
+        .hamburger { display: none; cursor: pointer; }
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: #333; /* Dark color for visibility */
+            transition: 0.4s;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 120px 0 60px; /* Navbar ke niche se shuru karne ke liye padding */
+            background-color: #fff;
+            flex: 1; /* Content area ko lamba karega taaki footer bottom me rahe */
+        }
+
+        .container { width: 80%; margin: auto; overflow: hidden; }
+        h2.section-title { text-align: center; color: #333; margin-bottom: 10px; }
+        p.section-sub { text-align: center; color: #666; margin-bottom: 30px; }
+
+        .contact-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .contact-form { flex: 1; }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            flex-basis: 35%;
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background: #111;
+            color: white;
+            padding: 50px 20px 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-box h2, .footer-box h3 { margin-bottom: 15px; color: #00bfff; }
+        .footer-box p, .footer-box a { color: #ccc; text-decoration: none; line-height: 1.8; }
+        .footer-box ul { list-style: none; }
+        .footer-box a:hover { color: #00bfff; }
+        .social-links { display: flex; flex-direction: column; }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #333;
+            margin-top: 30px;
+            padding-top: 15px;
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* Mobile Responsive (Corner Menu) */
+        @media (max-width: 1078px) {
+            .hamburger { display: block; }
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 250px;
+                height: auto;
+                background: #237fe9;
+                flex-direction: column;
+                padding: 20px;
+                border-radius: 15px 0 0 15px;
+                box-shadow: -5px 5px 15px rgba(0,0,0,0.2);
+                transition: 0.4s ease-in-out;
+            }
+
+            .nav-links.active { right: 0; }
+            .nav-links li { margin: 15px 0; width: 100%; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .nav-links a { font-size: 20px !important; color: pink !important; font-weight: 600 !important; }
+            .contact-wrapper { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>Green Bhopal</h2>
+            <p>Automation And Fountain, Irrigation Service</p>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-sub">Send us a message, and we'll get back to you soon!</p>
+            
+            <div class="contact-wrapper">
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <textarea rows="5" placeholder="Message" required></textarea>
+                    <button type="submit">Message Send</button>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    <p><strong>Email:</strong> iamintell@gmail.com</p>
+                    <p><strong>Phone:</strong> +91 9893898191</p>
+                    <p><strong>Address:</strong> Bhopal, Madhya Pradesh, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h2>Green Bhopal</h2>
+                <p>Innovative Smart Fountain & Irrigation Solutions for Every Space.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p>Email: Ramswaroopmalviya72@gmail.com</p>
+                <p>Phone: +91 9893898191</p>
+                <p>Ratan Colony Karond Chorah Bhopal, MP, India</p>
+            </div>
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://wa.me/919893898191" style="text-decoration: none;">Whatsapp</a>    
+                    <a href="https://www.instagram.com/greenbhopal/" style="text-decoration: none;">Instagram</a>
+                    <a href="https://www.facebook.com/greenbhopal/" style="text-decoration: none;">Facebook</a>
+                    <a href="https://www.youtube.com/@smartirrigationbhopal?si+6ZBggQSuE93EMSp6/" style="text-decoration: none;">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Green Bhopal | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
