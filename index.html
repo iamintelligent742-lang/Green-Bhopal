@@ -168,8 +168,9 @@ body {
 
     .nav-links li {
         margin: 20px 0;
-    }/*
-}       /* ========================================
+    }
+}
+                /*       /* ========================================
            CHATBOT
         ======================================== */
         .chatbot-toggle {
@@ -470,22 +471,22 @@ color:#888;
     <span class="bar"></span>
     </div>
     </nav>
-
-<!-- CHATBOT 
+    <!-- CHATBOT -->
                     <button style="font-size: xx-large;" class="chatbot-toggle" onclick="toggleChatbot()" aria-label="Open chat">
-                                  🤖
-                    <!-- <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                               <img src="Chatbot image.jpg" alt="Chatbot Avatar" style="border: #00bfff; border-radius: 50%; width: 55px; height: 55px;">
+         
+    <!--                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     </svg> 
-                </button>
+                -->        </button>
                 <div class="chatbot-window" id="chatbotWindow">
                     <div class="chatbot-header">
                         <div class="chatbot-avatar">
-                            <!-- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"> -->
-                                <!-- <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"> -->
-                                    🤖
-                                <!-- </path> -->
-                            <!-- </svg> 
+                            <img src="Chatbot image.jpg" alt="Chatbot Avatar" style="border: #00bfff; border-radius: 50%; width: 24px; height: 24px;">
+                            <!--<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2".> 
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">  
+                                </path>
+                            </svg> -->
                         </div>
                         <div class="chatbot-info">
                             <h4>Assistant</h4>
@@ -494,13 +495,13 @@ color:#888;
                     </div>
                     <div class="chatbot-messages" id="chatMessages">
                         <div class="chat-message">
-                            <div class="chat-message-avatar">🤖</div>
+                            <div class="chat-message-avatar"><img src="Chatbot image.jpg" alt="Chatbot Avatar" style="border: #00bfff; border-radius: 50%; width: 24px; height: 24px;"></div>
                             <div class="chat-message-content">
                                 Hello! Welcome to the Green Bhopal, Automation. I'm your farming assistant. I can help you with product recommendations, farming tips, and equipment guidance. How can I assist you today?
                             </div>
                         </div>
                     </div>
-                    <div class="chat-suggestions">
+                  <!--  <div class="chat-suggestions">
                         <button class="chat-suggestion" onclick="sendSuggestion('Product')">Products</button>
                         <button class="chat-suggestion" onclick="sendSuggestion('Irrigation')">Irrigation</button>
                         <button class="chat-suggestion" onclick="sendSuggestion('Garden')">Garden</button>
@@ -509,9 +510,9 @@ color:#888;
                         <button class="chat-suggestion" onclick="sendSuggestion('Payment')">Payment</button>
                         <button class="chat-suggestion" onclick="sendSuggestion('track')">Track</button>
                         <button class="chat-suggestion" onclick="sendSuggestion('off')">Discount</button>
-                    </div>
+                    </div>-->
                     <div class="chatbot-input">
-                        <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="if(event.key==='Enter')sendChatMessage()">
+                        <input type="text" id="chatInput" placeholder="Ask me anything..." onkeypress="if(event.key==='Enter')sendChatMessage()">
                         <button onclick="sendChatMessage()">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
                                 <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -519,7 +520,8 @@ color:#888;
                             </svg>
                         </button>
                     </div>
-                </div> -->
+                </div>
+
 <footer class="footer">
 <div class="footer-container">
 <div class="footer-box">
@@ -590,7 +592,7 @@ hamburger.addEventListener('click', () => {
             'automation': 'Our smart automation range includes soil moisture sensors (Rs. 1,850), farm automation timers (Rs. 3,200), greenhouse controllers (Rs. 15,800), and weather stations. These help optimize water usage and monitor crop conditions.',
             'sprayer': 'We have backpack sprayers starting at Rs. 4,800 and battery-powered sprayers at Rs. 8,500. For large farms, we recommend tractor-mounted sprayers. What capacity do you need?',
             'tractor': 'We offer mini tillers from Rs. 45,000 and tractor attachments like rotavators. These are perfect for small to medium farms. What s your farm size?',
-            'default': 'I can help you with product recommendations, irrigation tips, garden equipment, automation tools, order tracking, delivery information, and payment options. What would you like to know?'
+            'default': '<a href="https://wa.me/919893898191" target="_blank">Chat on WhatsApp</a> Sorry, I didn\'t understand that. You can ask about our products, order tracking, delivery, payment options, or any farming-related queries. How can I assist you today?'
         };
         function toggleChatbot() {
             document.getElementById('chatbotWindow').classList.toggle('active');
@@ -615,17 +617,18 @@ hamburger.addEventListener('click', () => {
             sendChatMessage();
         }
         function addChatMessage(text, type) {
-            const container = document.getElementById('chatMessages');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `chat-message ${type}`;
-            messageDiv.innerHTML = `
-                <div class="chat-message-avatar">${type === 'user' ? 'You' : '🤖'}</div>
-                <div class="chat-message-content">${text}</div>
-            `;
-            container.appendChild(messageDiv);
-            container.scrollTop = container.scrollHeight;
-        }
-        function getChatResponse(message) {
+    const container = document.getElementById('chatMessages');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `chat-message ${type}`;
+    messageDiv.innerHTML = `
+        <div class="chat-message-avatar">
+            ${type === 'user' ? 'You' : '<img src="Chatbot image.jpg" alt="Chatbot Avatar" style="border: 1px solid #00bfff; border-radius: 50%; width: 28px; height: 28px; object-fit: cover;">'}
+        </div>
+        <div class="chat-message-content">${text}</div>
+    `;
+    container.appendChild(messageDiv);
+    container.scrollTop = container.scrollHeight;
+}function getChatResponse(message) {
             const lowerMessage = message.toLowerCase();
             
             if (lowerMessage.includes('product') || lowerMessage.includes('recommend')) {
@@ -655,13 +658,14 @@ hamburger.addEventListener('click', () => {
             } else if (lowerMessage.includes('tractor') || lowerMessage.includes('tiller') || lowerMessage.includes('cultivator')) {
                 return chatResponses['tractor'];
             } else if (lowerMessage.includes('hello') || lowerMessage.includes('hi')  || lowerMessage.includes('he') || lowerMessage.includes('hey')) {
-                return 'Hello! Welcome to GreenTech Agriculture. How can I help you with your farming equipment needs today?';
+                return 'Hello! Welcome to Green Bhopal Automation. How can I help you with your farming equipment needs today?';
             } else if (lowerMessage.includes('thank')) {
                 return 'You\'re welcome! Is there anything else I can help you with? Feel free to ask about any of our products or services.';
             } else {
                 return chatResponses['default'];
             }
         }
+
 
     </script>
 </body>
