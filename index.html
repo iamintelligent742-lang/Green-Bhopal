@@ -473,7 +473,7 @@ color:#888;
     </nav>
     <!-- CHATBOT -->
                     <button style="font-size: xx-large;" class="chatbot-toggle" onclick="toggleChatbot()" aria-label="Open chat">
-                                               <img src="Chatbot image.jpg" alt="Chatbot Avatar" style="border: #00bfff; border-radius: 50%; width: 55px; height: 55px;">
+                                               <img src="chatbotimage.jpg" alt="Chatbot Avatar" style="border: #00bfff; border-radius: 50%; width: 55px; height: 55px;">
          
     <!--                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
@@ -482,7 +482,7 @@ color:#888;
                 <div class="chatbot-window" id="chatbotWindow">
                     <div class="chatbot-header">
                         <div class="chatbot-avatar">
-                            <img src="Chatbot image.jpg" alt="Chatbot Avatar" style="border: #00bfff; border-radius: 50%; width: 24px; height: 24px;">
+                            <img src="chatbotimage.jpg" alt="Chatbot Avatar" style="border: #00bfff; border-radius: 50%; width: 24px; height: 24px;">
                             <!--<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2".> 
                             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">  
                                 </path>
@@ -495,7 +495,7 @@ color:#888;
                     </div>
                     <div class="chatbot-messages" id="chatMessages">
                         <div class="chat-message">
-                            <div class="chat-message-avatar"><img src="Chatbot image.jpg" alt="Chatbot Avatar" style="border: #00bfff; border-radius: 50%; width: 24px; height: 24px;"></div>
+                            <div class="chat-message-avatar"><img src="chatbotimage.jpg" alt="Chatbot Avatar" style="border: #00bfff; border-radius: 50%; width: 24px; height: 24px;"></div>
                             <div class="chat-message-content">
                                 Hello! Welcome to the Green Bhopal, Automation. I'm your farming assistant. I can help you with product recommendations, farming tips, and equipment guidance. How can I assist you today?
                             </div>
@@ -622,7 +622,7 @@ hamburger.addEventListener('click', () => {
     messageDiv.className = `chat-message ${type}`;
     messageDiv.innerHTML = `
         <div class="chat-message-avatar">
-            ${type === 'user' ? 'You' : '<img src="Chatbot image.jpg" alt="Chatbot Avatar" style="border: 1px solid #00bfff; border-radius: 50%; width: 28px; height: 28px; object-fit: cover;">'}
+            ${type === 'user' ? 'You' : '<img src="chatbotimage.jpg" alt="Chatbot Avatar" style="border: 1px solid #00bfff; border-radius: 50%; width: 28px; height: 28px; object-fit: cover;">'}
         </div>
         <div class="chat-message-content">${text}</div>
     `;
